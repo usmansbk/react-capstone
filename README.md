@@ -1,12 +1,12 @@
-# React Capstone Project
+# React Capstone Project - Covid-19 Tracker
 
 ![Microverse](https://img.shields.io/badge/Microverse-blueviolet)
 
-> Metrics Webapp
+> Covid-19 Tracker
 
 ![screenshot](./app_screenshot.jpeg)
 
-This project is about building a mobile web application to check a list of metrics (numeric values)
+This application displays Covid-19 information from different data sources.
 
 ## Built With
 
@@ -76,6 +76,7 @@ Give a ⭐️ if you like this project!
 
 - Microverse
 - Besign by Nelson Sakwa on [Behance](https://www.behance.net/gallery/31579789/Ballhead-App-(Free-PSDs))
+- Powered by [Coronavirus data api](https://covid19tracking.narrativa.com/index_en.html)
 
 ## 📝 License
 
