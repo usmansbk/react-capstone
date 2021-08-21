@@ -27,9 +27,10 @@ export const fetchCountries = (continent) => async (dispatch) => {
   const map = await API.getCountries(continent);
 
   const data = Object.values(map).reduce((accumulator, currentValue) => {
-    const { All: country } = currentValue;
-    accumulator.list.push(country);
-    accumulator.total += country.confirmed;
+    const { All: { country, confirmed } } = currentValue;
+
+    accumulator.list.push({ name: country, confirmed });
+    accumulator.total += confirmed;
 
     return accumulator;
   }, {

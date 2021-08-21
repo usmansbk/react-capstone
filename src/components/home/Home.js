@@ -32,10 +32,10 @@ const Home = () => {
         {total}
       </h1>
       <ul>
-        {list.map(({ country, confirmed }) => (
-          <li key={country}>
-            <Link to={`/country/${country}`}>
-              {country}
+        {list.map(({ name, confirmed }) => (
+          <li key={name}>
+            <Link to={`/country/${name}`}>
+              {name}
               {' '}
               -
               {' '}
