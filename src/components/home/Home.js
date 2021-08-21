@@ -1,9 +1,10 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import numeral from 'numeral';
 import { fetchCountries } from '../../redux/countries/countries';
 import './Home.css';
+
+const format = (n) => n.toLocaleString('en-US');
 
 const Home = () => {
   const continent = 'Europe';
@@ -31,7 +32,7 @@ const Home = () => {
       </header>
       <div className="Home-banner">
         <h1 className="Home-title">{continent}</h1>
-        <p className="Home-subtitle">{`${numeral(totalConfirmed).format('0,0')} cases`}</p>
+        <p className="Home-subtitle">{`${format(totalConfirmed)} cases`}</p>
       </div>
       <section className="Home-stats">
         <h5 className="Home-stats-title">STATS BY COUNTRY</h5>
@@ -41,7 +42,7 @@ const Home = () => {
               <Link to={`/country/${name}`}>
                 <div className="Home-item-content">
                   <h4 className="Home-title">{name}</h4>
-                  <p className="Home-subtitle">{confirmed}</p>
+                  <p className="Home-subtitle">{format(confirmed)}</p>
                 </div>
               </Link>
             </li>

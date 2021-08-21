@@ -37,16 +37,20 @@
 
 .Home-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, auto);
     grid-auto-columns: 1fr;
     list-style-type: none;
 }
 
-.Home-grid-item:nth-child(even) {
+.Home-grid-item:nth-child(3n+2) {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
 .Home-item-content {
   padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-align: right;
   height: 100px;
 }
