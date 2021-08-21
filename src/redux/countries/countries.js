@@ -2,7 +2,7 @@ import { showLoading, hideLoading } from 'react-redux-loading-bar';
 import * as API from './api';
 
 const LOAD_COUNTRIES = 'cases/load-countries';
-const GET_COUNTRY = 'cases/get-country';
+const LOAD_COUNTRY = 'cases/load-country';
 
 const loadCountries = (payload) => ({
   type: LOAD_COUNTRIES,
@@ -10,7 +10,7 @@ const loadCountries = (payload) => ({
 });
 
 const loadCountry = (payload) => ({
-  type: GET_COUNTRY,
+  type: LOAD_COUNTRY,
   payload,
 });
 
@@ -53,7 +53,7 @@ const reducer = (state = initialState, action) => {
   switch (action.type) {
     case LOAD_COUNTRIES:
       return action.payload;
-    case GET_COUNTRY:
+    case LOAD_COUNTRY:
       return { ...state, selected: action.payload };
     default:
       return state;
