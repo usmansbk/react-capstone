@@ -7,13 +7,13 @@ const Home = () => {
   const continent = 'Europe';
 
   const dispatch = useDispatch();
-  const { list, total, loading } = useSelector((state) => ({
+  const { items, totalConfirmed, loading } = useSelector((state) => ({
     ...state.countries,
     loading: state.loadingBar.default,
   }));
 
   useEffect(() => {
-    if (!list.length) {
+    if (!items.length) {
       dispatch(fetchCountries(continent));
     }
   }, []);
@@ -29,10 +29,10 @@ const Home = () => {
         {' '}
         -
         {' '}
-        {total}
+        {totalConfirmed}
       </h1>
       <ul>
-        {list.map(({ name, confirmed }) => (
+        {items.map(({ name, confirmed }) => (
           <li key={name}>
             <Link to={`/country/${name}`}>
               {name}
