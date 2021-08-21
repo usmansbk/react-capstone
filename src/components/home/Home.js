@@ -7,13 +7,20 @@ const Home = () => {
   const continent = 'Europe';
 
   const dispatch = useDispatch();
-  const { countries, total } = useSelector((state) => state.countries);
+  const { countries, total, loading } = useSelector((state) => ({
+    ...state.countries,
+    loading: state.loadingBar.default,
+  }));
 
   useEffect(() => {
     if (!countries.length) {
       dispatch(fetchCountries(continent));
     }
   }, []);
+
+  if (loading) {
+    return <h1>Loading...</h1>;
+  }
 
   return (
     <section>

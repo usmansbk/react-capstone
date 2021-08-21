@@ -16,7 +16,7 @@ const Details = () => {
   }, []);
 
   if (loading) {
-    return <h1>Loading</h1>;
+    return <h1>Loading...</h1>;
   }
 
   const { All } = country;
