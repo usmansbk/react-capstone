@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { fetchCountries } from '../../redux/countries/countries';
+import './Home.css';
 
 const Home = () => {
   const continent = 'Europe';
@@ -24,6 +25,9 @@ const Home = () => {
 
   return (
     <section>
+      <header className="Home-header">
+        <h5 className="Home-header-title">confirmed cases</h5>
+      </header>
       <h1>
         {continent}
         {' '}
