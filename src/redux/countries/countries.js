@@ -21,7 +21,6 @@ export const fetchCountries = (continent) => async (dispatch) => {
     continent,
     total: 0,
     countries: [],
-    map,
   });
 
   data.countries = data.countries.sort((a, b) => b.confirmed - a.confirmed);
