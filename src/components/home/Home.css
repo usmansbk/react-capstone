@@ -22,7 +22,7 @@
 
 .Home-title {
   font-family: GillSansBold, sans-serif;
-  font-size: 30px;
+  font-size: 18px;
   text-transform: uppercase;
 }
 
@@ -37,10 +37,16 @@
 
 .Home-grid {
     display: grid;
-    grid-template-columns: auto auto;
-    grid-auto-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-columns: 1fr;
+    list-style-type: none;
 }
 
-.Home-grid-item:nth-child(3n+1) {
+.Home-grid-item:nth-child(even) {
   background-color: rgba(0, 0, 0, 0.1);
+}
+
+.Home-item-content {
+  padding: 16px;
+  height: 100px;
 }

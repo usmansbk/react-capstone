@@ -39,11 +39,10 @@ const Home = () => {
           {items.map(({ name, confirmed }) => (
             <li key={name} className="Home-grid-item">
               <Link to={`/country/${name}`}>
-                {name}
-                {' '}
-                -
-                {' '}
-                {confirmed}
+                <div className="Home-item-content">
+                  <h4 className="Home-title">{name}</h4>
+                  <p className="Home-subtitle">{confirmed}</p>
+                </div>
               </Link>
             </li>
           ))}
