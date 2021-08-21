@@ -6,13 +6,16 @@ import { fetchCountry } from '../../redux/countries/countries';
 const Details = () => {
   const { name } = useParams();
   const dispatch = useDispatch();
-  const { country } = useSelector((state) => state.countries);
+  const { country, loading } = useSelector((state) => ({
+    loading: state.loadingBar.default,
+    country: state.countries.country,
+  }));
 
   useEffect(() => {
     dispatch(fetchCountry(name));
   }, []);
 
-  if (!country) {
+  if (loading) {
     return <h1>Loading</h1>;
   }
 
