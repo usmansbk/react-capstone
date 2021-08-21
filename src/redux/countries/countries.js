@@ -1,3 +1,5 @@
+import { showLoading, hideLoading } from 'react-redux-loading-bar';
+
 const API_BASE = 'https://covid-api.mmediagroup.fr/v1/cases';
 
 const LOAD_COUNTRIES = 'cases/load-countries';
@@ -14,13 +16,16 @@ const loadCountry = (payload) => ({
 });
 
 export const fetchCountry = (name) => async (dispatch) => {
+  dispatch(showLoading());
   const response = await fetch(`${API_BASE}?country=${name}`);
   const data = await response.json();
 
   dispatch(loadCountry(data));
+  dispatch(hideLoading());
 };
 
 export const fetchCountries = (continent) => async (dispatch) => {
+  dispatch(showLoading());
   const response = await fetch(`${API_BASE}?continent=${continent}`);
   const map = await response.json();
 
@@ -39,6 +44,7 @@ export const fetchCountries = (continent) => async (dispatch) => {
   data.countries = data.countries.sort((a, b) => b.confirmed - a.confirmed);
 
   dispatch(loadCountries(data));
+  dispatch(hideLoading());
 };
 
 const initialState = {
