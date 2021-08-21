@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+import numeral from 'numeral';
 import { fetchCountries } from '../../redux/countries/countries';
 import './Home.css';
 
@@ -30,21 +31,24 @@ const Home = () => {
       </header>
       <div className="Home-banner">
         <h1 className="Home-title">{continent}</h1>
-        <p className="Home-subtitle">{`${totalConfirmed} cases`}</p>
+        <p className="Home-subtitle">{`${numeral(totalConfirmed).format('0,0')} cases`}</p>
       </div>
-      <ul>
-        {items.map(({ name, confirmed }) => (
-          <li key={name}>
-            <Link to={`/country/${name}`}>
-              {name}
-              {' '}
-              -
-              {' '}
-              {confirmed}
-            </Link>
-          </li>
-        ))}
-      </ul>
+      <section className="Home-stats">
+        <h5 className="Home-stats-title">STATS BY COUNTRY</h5>
+        <ul className="Home-grid">
+          {items.map(({ name, confirmed }) => (
+            <li key={name} className="Home-grid-item">
+              <Link to={`/country/${name}`}>
+                {name}
+                {' '}
+                -
+                {' '}
+                {confirmed}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </section>
     </section>
   );
 };

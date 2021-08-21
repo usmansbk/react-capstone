@@ -25,3 +25,22 @@
   font-size: 30px;
   text-transform: uppercase;
 }
+
+.Home-stats {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.Home-stats-title {
+    font-size: 16;
+    padding: 4px 8px;
+}
+
+.Home-grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-auto-rows: 1fr;
+}
+
+.Home-grid-item:nth-child(3n+1) {
+  background-color: rgba(0, 0, 0, 0.1);
+}
