@@ -4,12 +4,12 @@ import * as API from './api';
 const LOAD_COUNTRIES = 'cases/load-countries';
 const LOAD_COUNTRY = 'cases/load-country';
 
-const loadCountries = (payload) => ({
+export const loadCountries = (payload) => ({
   type: LOAD_COUNTRIES,
   payload,
 });
 
-const loadCountry = (payload) => ({
+export const loadCountry = (payload) => ({
   type: LOAD_COUNTRY,
   payload,
 });
