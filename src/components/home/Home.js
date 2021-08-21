@@ -32,8 +32,8 @@ const Home = () => {
         {total}
       </h1>
       <ul>
-        {list.map(({ country, confirmed, abbreviation }) => (
-          <li key={abbreviation}>
+        {list.map(({ country, confirmed }) => (
+          <li key={country}>
             <Link to={`/country/${country}`}>
               {country}
               {' '}
