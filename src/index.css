@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
 
 @font-face {
   font-family: GillSans;
@@ -10,12 +10,6 @@
   font-family: GillSansBold;
   src: url(./assets/GillSansBold.otf);
   font-weight: bold;
-}
-
-@font-face {
-  font-family: GillSansLight;
-  src: url(./assets/GillSansLight.otf);
-  font-weight: lighter;
 }
 
 @font-face {
