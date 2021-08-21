@@ -15,7 +15,7 @@ const Details = () => {
     dispatch(fetchCountry(name));
   }, []);
 
-  if (loading) {
+  if (loading || !country) {
     return <h1>Loading...</h1>;
   }
 
