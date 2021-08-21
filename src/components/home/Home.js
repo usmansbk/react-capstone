@@ -28,7 +28,7 @@ const Home = () => {
   return (
     <section>
       <header className="Home-header">
-        <h5 className="Home-header-title">confirmed cases</h5>
+        <h5 className="Home-header-title">cases</h5>
       </header>
       <div className="Home-banner">
         <h1 className="Home-title">{continent}</h1>
