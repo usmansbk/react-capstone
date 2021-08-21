@@ -3,14 +3,18 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { fetchCountries } from '../../redux/countries/countries';
+import Icon from '../Icon';
 import './Home.css';
 
 const format = (n) => n.toLocaleString('en-US');
 
 const Item = ({ confirmed, name }) => (
   <div className="Home-item-content">
-    <h4 className="Home-title">{name}</h4>
-    <p className="Home-subtitle">{format(confirmed)}</p>
+    <Icon name="arrow_right" />
+    <div>
+      <h4 className="Home-title">{name}</h4>
+      <p className="Home-subtitle">{format(confirmed)}</p>
+    </div>
   </div>
 );
 
@@ -65,10 +69,10 @@ const Home = () => {
 export default Home;
 
 Item.propTypes = {
-  confirmed: PropTypes.string.isRequired,
+  confirmed: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
 };
 
 Grid.propTypes = {
-  items: PropTypes.arrayOf(Item.propTypes).isRequired,
+  items: PropTypes.arrayOf(PropTypes.shape(Item.propTypes)).isRequired,
 };

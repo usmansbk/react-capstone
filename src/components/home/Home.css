@@ -57,7 +57,7 @@
   padding: 16px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: space-between;
   text-align: right;
   height: 100px;
 }
