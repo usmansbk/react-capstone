@@ -9,11 +9,33 @@ const loadCountries = (payload) => ({
 
 export const fetchCountries = (continent = 'Europe') => async (dispatch) => {
   const response = await fetch(`${API_BASE}?continent=${continent}`);
-  const countries = await response.json();
-  dispatch(loadCountries(countries));
+  const map = await response.json();
+
+  const data = Object.values(map).reduce((accumulator, currentValue) => {
+    const { All: country } = currentValue;
+    accumulator.countries.push(country);
+    accumulator.total += country.confirmed;
+
+    return accumulator;
+  }, {
+    continent,
+    total: 0,
+    countries: [],
+    map,
+  });
+
+  data.countries = data.countries.sort((a, b) => b.confirmed - a.confirmed);
+
+  dispatch(loadCountries(data));
 };
 
-const reducer = (state = {}, action) => {
+const initialState = {
+  continent: 'Europe',
+  total: 0,
+  countries: [],
+};
+
+const reducer = (state = initialState, action) => {
   switch (action.type) {
     case LOAD_COUNTRIES:
       return action.payload;
