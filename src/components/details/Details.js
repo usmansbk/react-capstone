@@ -8,7 +8,7 @@ const Details = () => {
   const dispatch = useDispatch();
   const { country, loading } = useSelector((state) => ({
     loading: state.loadingBar.default,
-    country: state.countries.country,
+    country: state.countries.selected,
   }));
 
   useEffect(() => {

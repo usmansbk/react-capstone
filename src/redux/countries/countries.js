@@ -31,17 +31,16 @@ export const fetchCountries = (continent) => async (dispatch) => {
 
   const data = Object.values(map).reduce((accumulator, currentValue) => {
     const { All: country } = currentValue;
-    accumulator.countries.push(country);
+    accumulator.list.push(country);
     accumulator.total += country.confirmed;
 
     return accumulator;
   }, {
-    continent,
     total: 0,
-    countries: [],
+    list: [],
   });
 
-  data.countries = data.countries.sort((a, b) => b.confirmed - a.confirmed);
+  data.list = data.list.sort((a, b) => b.confirmed - a.confirmed);
 
   dispatch(loadCountries(data));
   dispatch(hideLoading());
@@ -49,8 +48,8 @@ export const fetchCountries = (continent) => async (dispatch) => {
 
 const initialState = {
   total: 0,
-  countries: [],
-  country: null,
+  list: [],
+  selected: null,
 };
 
 const reducer = (state = initialState, action) => {
@@ -58,7 +57,7 @@ const reducer = (state = initialState, action) => {
     case LOAD_COUNTRIES:
       return action.payload;
     case GET_COUNTRY:
-      return { ...state, country: action.payload };
+      return { ...state, selected: action.payload };
     default:
       return state;
   }
