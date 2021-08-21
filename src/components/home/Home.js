@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
@@ -5,6 +6,25 @@ import { fetchCountries } from '../../redux/countries/countries';
 import './Home.css';
 
 const format = (n) => n.toLocaleString('en-US');
+
+const Item = ({ confirmed, name }) => (
+  <div className="Home-item-content">
+    <h4 className="Home-title">{name}</h4>
+    <p className="Home-subtitle">{format(confirmed)}</p>
+  </div>
+);
+
+const Grid = ({ items = [] }) => (
+  <ul className="Home-grid">
+    {items.map(({ name, confirmed }) => (
+      <li key={name} className="Home-grid-item">
+        <Link to={`/country/${name}`}>
+          <Item confirmed={confirmed} name={name} />
+        </Link>
+      </li>
+    ))}
+  </ul>
+);
 
 const Home = () => {
   const continent = 'Europe';
@@ -36,21 +56,19 @@ const Home = () => {
       </div>
       <section className="Home-stats">
         <h5 className="Home-stats-title">STATS BY COUNTRY</h5>
-        <ul className="Home-grid">
-          {items.map(({ name, confirmed }) => (
-            <li key={name} className="Home-grid-item">
-              <Link to={`/country/${name}`}>
-                <div className="Home-item-content">
-                  <h4 className="Home-title">{name}</h4>
-                  <p className="Home-subtitle">{format(confirmed)}</p>
-                </div>
-              </Link>
-            </li>
-          ))}
-        </ul>
+        <Grid items={items} />
       </section>
     </section>
   );
 };
 
 export default Home;
+
+Item.propTypes = {
+  confirmed: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+};
+
+Grid.propTypes = {
+  items: PropTypes.arrayOf(Item.propTypes).isRequired,
+};
