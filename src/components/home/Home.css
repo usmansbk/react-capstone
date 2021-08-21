@@ -26,6 +26,10 @@
   text-transform: uppercase;
 }
 
+.Home-subtitle {
+  font-family: GillSans, sans-serif;
+}
+
 .Home-stats {
   background-color: rgba(0, 0, 0, 0.1);
 }
@@ -46,7 +50,7 @@
 .Home-grid-item:nth-child(4n+2),
 .Home-grid-item:nth-child(4n+3)
 {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.08);
 }
 
 .Home-item-content {
