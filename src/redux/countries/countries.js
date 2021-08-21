@@ -7,7 +7,7 @@ const loadCountries = (payload) => ({
   payload,
 });
 
-export const fetchCountries = (continent = 'Europe') => async (dispatch) => {
+export const fetchCountries = (continent) => async (dispatch) => {
   const response = await fetch(`${API_BASE}?continent=${continent}`);
   const map = await response.json();
 
@@ -30,7 +30,6 @@ export const fetchCountries = (continent = 'Europe') => async (dispatch) => {
 };
 
 const initialState = {
-  continent: 'Europe',
   total: 0,
   countries: [],
 };
