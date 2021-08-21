@@ -7,15 +7,16 @@ test('should return the initial state', () => {
     selected: null,
   };
 
-  expect(reducer(undefined, {})).toEqual(initialState);
+  const newState = reducer(undefined, {});
+
+  expect(newState).toEqual(initialState);
 });
 
-test('should handle adding countries data', () => {
+test('should handle adding countries', () => {
   const prevState = {
     total: 0,
     list: [],
   };
-
   const list = [
     { country: 'Testing country 1', confirmed: 3 },
     { country: 'Testing country 2', confirmed: 2 },
@@ -32,13 +33,12 @@ test('should handle adding countries data', () => {
   });
 });
 
-test('should add selected country data', () => {
+test('should handle adding selected country', () => {
   const prevState = {
     total: 0,
     list: [],
     selected: null,
   };
-
   const data = {
     All: {
       country: 'Testing',
