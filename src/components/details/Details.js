@@ -1,16 +1,28 @@
-import { useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link, useParams } from 'react-router-dom';
+import { fetchCountry } from '../../redux/countries/countries';
 
 const Details = () => {
-  const { country } = useParams();
-  const { confirmed } = useSelector((state) => (
-    state.countries.countries.find((elem) => elem.country === country)));
+  const { name } = useParams();
+  const dispatch = useDispatch();
+  const { country } = useSelector((state) => state.countries);
+
+  useEffect(() => {
+    dispatch(fetchCountry(name));
+  }, []);
+
+  if (!country) {
+    return <h1>Loading</h1>;
+  }
+
+  const { All } = country;
 
   return (
     <div>
       <Link to="/">Go Back</Link>
-      <h1>{country}</h1>
-      <h1>{confirmed}</h1>
+      <h1>{All.country}</h1>
+      <h1>{All.confirmed}</h1>
     </div>
   );
 };

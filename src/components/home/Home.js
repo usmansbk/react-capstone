@@ -27,7 +27,7 @@ const Home = () => {
       <ul>
         {countries.map(({ country, confirmed, abbreviation }) => (
           <li key={abbreviation}>
-            <Link to={`/details/${country}`}>
+            <Link to={`/country/${country}`}>
               {country}
               {' '}
               -
