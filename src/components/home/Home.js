@@ -28,13 +28,10 @@ const Home = () => {
       <header className="Home-header">
         <h5 className="Home-header-title">confirmed cases</h5>
       </header>
-      <h1>
-        {continent}
-        {' '}
-        -
-        {' '}
-        {totalConfirmed}
-      </h1>
+      <div className="Home-banner">
+        <h1 className="Home-title">{continent}</h1>
+        <p className="Home-subtitle">{`${totalConfirmed} cases`}</p>
+      </div>
       <ul>
         {items.map(({ name, confirmed }) => (
           <li key={name}>

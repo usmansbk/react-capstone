@@ -1,14 +1,27 @@
 .Home-header {
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #FF4081;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .Home-header-title {
-    font-family: 'Lato', sans-serif;
-    font-weight: 300;
-    font-size: 18px;
-    line-height: 20px;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.Home-banner {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.Home-title {
+  font-family: GillSansBold, sans-serif;
+  font-size: 30px;
+  text-transform: uppercase;
 }
