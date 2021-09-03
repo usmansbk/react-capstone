@@ -1,5 +1,5 @@
 .Details-banner {
-  padding: 40px;
+  padding: 24px;
   display: flex;
   gap: 30px;
   text-align: end;
@@ -10,4 +10,9 @@
   width: 100%;
   flex-direction: column;
   justify-content: center;
+}
+
+.Details-banner-left {
+  width: 100%;
+  align-items: flex-start;
 }

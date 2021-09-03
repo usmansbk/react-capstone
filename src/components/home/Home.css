@@ -1,5 +1,5 @@
 .Home-banner {
-  padding: 40px;
+  padding: 24px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
