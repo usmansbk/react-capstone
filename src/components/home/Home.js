@@ -5,13 +5,20 @@ import { Link } from 'react-router-dom';
 import { fetchCountries } from '../../redux/countries/countries';
 import Icon from '../Icon';
 import './Home.css';
+import virus from '../../assets/virus.svg';
+import map from '../../assets/europe.png';
 
 const format = (n) => n.toLocaleString('en-US');
 
 const Item = ({ confirmed, name }) => (
   <div className="Home-item-content">
-    <Icon name="arrow_right" />
-    <div>
+    <div className="Home-item-icon">
+      <Icon name="arrow_right" />
+    </div>
+    <div className="Home-item-top">
+      <img src={virus} alt="" className="Home-item-image" />
+    </div>
+    <div className="Home-item-bottom">
       <h4 className="Home-title">{name}</h4>
       <p className="Home-subtitle">{format(confirmed)}</p>
     </div>
@@ -55,8 +62,13 @@ const Home = () => {
         <h5 className="Home-header-title">cases</h5>
       </header>
       <div className="Home-banner">
-        <h1 className="Home-title">{continent}</h1>
-        <p className="Home-subtitle">{`${format(totalConfirmed)} cases`}</p>
+        <div className="Home-banner-left">
+          <img src={map} alt="" className="Home-map" />
+        </div>
+        <div className="Home-banner-right">
+          <h1 className="Home-title">{continent}</h1>
+          <p className="Home-subtitle">{`${format(totalConfirmed)} cases`}</p>
+        </div>
       </div>
       <section className="Home-stats">
         <h5 className="Home-stats-title">STATS BY COUNTRY</h5>
