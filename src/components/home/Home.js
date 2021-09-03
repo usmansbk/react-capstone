@@ -5,13 +5,19 @@ import { Link } from 'react-router-dom';
 import { fetchCountries } from '../../redux/countries/countries';
 import Icon from '../Icon';
 import './Home.css';
+import virus from '../../assets/virus.svg';
 
 const format = (n) => n.toLocaleString('en-US');
 
 const Item = ({ confirmed, name }) => (
   <div className="Home-item-content">
-    <Icon name="arrow_right" />
-    <div>
+    <div className="Home-item-icon">
+      <Icon name="arrow_right" />
+    </div>
+    <div className="Home-item-top">
+      <img src={virus} alt="" className="Home-item-image" />
+    </div>
+    <div className="Home-item-bottom">
       <h4 className="Home-title">{name}</h4>
       <p className="Home-subtitle">{format(confirmed)}</p>
     </div>
