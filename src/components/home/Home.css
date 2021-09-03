@@ -28,6 +28,7 @@
 
 .Home-map {
   width: 100%;
+  filter: brightness(40%) opacity(0.5);
 }
 
 .Home-title {
@@ -56,8 +57,8 @@
   list-style-type: none;
 }
 
-.Home-grid-item:nth-child(4n+2),
-.Home-grid-item:nth-child(4n+3) {
+.Home-grid-item:nth-child(4n + 2),
+.Home-grid-item:nth-child(4n + 3) {
   background-color: rgba(0, 0, 0, 0.08);
 }
 
@@ -84,7 +85,7 @@
 
 .Home-item-image {
   width: 100px;
-  filter: grayscale(50%);
+  filter: brightness(50%) grayscale(50%) opacity(0.5);
 }
 
 .Home-item-icon {
