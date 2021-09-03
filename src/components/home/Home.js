@@ -4,11 +4,10 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { fetchCountries } from '../../redux/countries/countries';
 import Icon from '../Icon';
+import formatNumber from '../../utils/formatNumber';
 import './Home.css';
 import virus from '../../assets/virus.svg';
 import map from '../../assets/europe.png';
-
-const format = (n) => n.toLocaleString('en-US');
 
 const Item = ({ confirmed, name }) => (
   <div className="Home-item-content">
@@ -20,7 +19,7 @@ const Item = ({ confirmed, name }) => (
     </div>
     <div className="Home-item-bottom">
       <h4 className="App-title">{name}</h4>
-      <p className="App-subtitle">{format(confirmed)}</p>
+      <p className="App-subtitle">{formatNumber(confirmed)}</p>
     </div>
   </div>
 );
@@ -67,7 +66,7 @@ const Home = () => {
         </div>
         <div className="Home-banner-right">
           <h1 className="App-title">{continent}</h1>
-          <p className="App-subtitle">{`${format(totalConfirmed)} cases`}</p>
+          <p className="App-subtitle">{`${formatNumber(totalConfirmed)} cases`}</p>
         </div>
       </div>
       <section className="Home-stats">

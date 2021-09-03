@@ -2,11 +2,10 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useParams } from 'react-router-dom';
 import { fetchCountry } from '../../redux/countries/countries';
+import formatNumber from '../../utils/formatNumber';
 import Icon from '../Icon';
 import map from '../../assets/europe.png';
 import './Details.css';
-
-const format = (n) => n.toLocaleString('en-US');
 
 const Details = () => {
   const { name } = useParams();
@@ -25,6 +24,7 @@ const Details = () => {
   }
 
   const { All } = country;
+  const list = Object.entries(country).slice(1);
 
   return (
     <section>
@@ -40,11 +40,18 @@ const Details = () => {
         </div>
         <div className="Details-banner-right">
           <h1 className="App-title">{All.country}</h1>
-          <p className="App-subtitle">{`${format(All.confirmed)} cases`}</p>
+          <p className="App-subtitle">{`${formatNumber(All.confirmed)} cases`}</p>
         </div>
       </div>
       <section className="Home-stats">
         <h5 className="App-section-title">CITY/TOWN BREAKDOWN - 2021</h5>
+        <ul>
+          {list.map(([name]) => (
+            <li key={name} className="Details-item">
+              <h6 className="Details-item-title">{name}</h6>
+            </li>
+          ))}
+        </ul>
       </section>
     </section>
   );

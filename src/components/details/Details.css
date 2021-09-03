@@ -16,3 +16,17 @@
   width: 100%;
   align-items: flex-start;
 }
+
+.Details-item {
+  padding: 24px 8px;
+  cursor: pointer;
+}
+
+.Details-item:nth-child(odd) {
+  background-color: rgba(225, 225, 225, 0.08);
+}
+
+.Details-item-title {
+  font-family: GillSansMedium, sans-serif;
+  font-size: 20px;
+}
