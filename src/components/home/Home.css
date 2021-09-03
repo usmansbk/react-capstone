@@ -56,8 +56,8 @@
   list-style-type: none;
 }
 
-.Home-grid-item:nth-child(4n+2),
-.Home-grid-item:nth-child(4n+3) {
+.Home-grid-item:nth-child(4n + 2),
+.Home-grid-item:nth-child(4n + 3) {
   background-color: rgba(0, 0, 0, 0.08);
 }
 
