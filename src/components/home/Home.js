@@ -62,7 +62,9 @@ const Home = () => {
         <h4>2021</h4>
         <h5 className="App-header-title">confirmed cases</h5>
         <Icon name="mic" />
-        <Icon name="settings" />
+        <div className="pl-5">
+          <Icon name="settings" />
+        </div>
       </header>
       <div className="Home-banner">
         <div className="Home-banner-left">

@@ -34,6 +34,10 @@ a {
   color: inherit;
 }
 
+.pl-5 {
+  padding-left: 16px;
+}
+
 .App-loading-bar {
   background-color: white;
   position: absolute;
@@ -41,7 +45,7 @@ a {
 }
 
 .App-header {
-  height: 40px;
+  height: 48px;
   display: flex;
   justify-content: center;
   align-items: center;

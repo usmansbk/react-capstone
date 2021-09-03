@@ -4,7 +4,7 @@ import { Link, useParams } from 'react-router-dom';
 import { fetchCountry } from '../../redux/countries/countries';
 import formatNumber from '../../utils/formatNumber';
 import Icon from '../Icon';
-import map from '../../assets/europe.png';
+import image from '../../assets/virus.svg';
 import './Details.css';
 
 const Details = () => {
@@ -34,11 +34,13 @@ const Details = () => {
         </Link>
         <h5 className="App-header-title">town/city views</h5>
         <Icon name="mic" />
-        <Icon name="settings" />
+        <div className="pl-5">
+          <Icon name="settings" />
+        </div>
       </header>
       <div className="Details-banner">
         <div className="Details-banner-left">
-          <img src={map} alt="" className="App-map" />
+          <img src={image} alt="" className="App-map" />
         </div>
         <div className="Details-banner-right">
           <h1 className="App-title">{All.country}</h1>
