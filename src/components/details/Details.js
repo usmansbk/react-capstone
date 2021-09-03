@@ -33,6 +33,8 @@ const Details = () => {
           <Icon name="arrow_back_ios" />
         </Link>
         <h5 className="App-header-title">town/city views</h5>
+        <Icon name="mic" />
+        <Icon name="settings" />
       </header>
       <div className="Details-banner">
         <div className="Details-banner-left">

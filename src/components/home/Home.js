@@ -58,7 +58,11 @@ const Home = () => {
   return (
     <section>
       <header className="App-header">
+        <Icon name="arrow_back_ios" />
+        <h4>2021</h4>
         <h5 className="App-header-title">confirmed cases</h5>
+        <Icon name="mic" />
+        <Icon name="settings" />
       </header>
       <div className="Home-banner">
         <div className="Home-banner-left">
