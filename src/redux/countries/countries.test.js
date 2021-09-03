@@ -2,8 +2,8 @@ import reducer, { loadCountries, loadCountry } from './countries';
 
 test('should return the initial state', () => {
   const initialState = {
-    total: 0,
-    list: [],
+    totalConfirmed: 0,
+    items: [],
     selected: null,
   };
 
@@ -14,29 +14,29 @@ test('should return the initial state', () => {
 
 test('should handle adding countries', () => {
   const prevState = {
-    total: 0,
-    list: [],
+    totalConfirmed: 0,
+    items: [],
   };
-  const list = [
+  const items = [
     { country: 'Testing country 1', confirmed: 3 },
     { country: 'Testing country 2', confirmed: 2 },
   ];
 
   const newState = reducer(prevState, loadCountries({
-    list,
-    total: 5,
+    items,
+    totalConfirmed: 5,
   }));
 
   expect(newState).toEqual({
-    total: 5,
-    list,
+    totalConfirmed: 5,
+    items,
   });
 });
 
 test('should handle adding selected country', () => {
   const prevState = {
-    total: 0,
-    list: [],
+    totalConfirmed: 0,
+    items: [],
     selected: null,
   };
   const data = {
@@ -48,8 +48,8 @@ test('should handle adding selected country', () => {
   const newState = reducer(prevState, loadCountry(data));
 
   expect(newState).toEqual({
-    total: 0,
-    list: [],
+    totalConfirmed: 0,
+    items: [],
     selected: data,
   });
 });

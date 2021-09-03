@@ -27,25 +27,26 @@ export const fetchCountries = (continent) => async (dispatch) => {
   const map = await API.getCountries(continent);
 
   const data = Object.values(map).reduce((accumulator, currentValue) => {
-    const { All: country } = currentValue;
-    accumulator.list.push(country);
-    accumulator.total += country.confirmed;
+    const { All: { country, confirmed } } = currentValue;
+
+    accumulator.items.push({ name: country, confirmed });
+    accumulator.totalConfirmed += confirmed;
 
     return accumulator;
   }, {
-    total: 0,
-    list: [],
+    totalConfirmed: 0,
+    items: [],
   });
 
-  data.list = data.list.sort((a, b) => b.confirmed - a.confirmed);
+  data.items = data.items.sort((a, b) => b.confirmed - a.confirmed);
 
   dispatch(loadCountries(data));
   dispatch(hideLoading());
 };
 
 const initialState = {
-  total: 0,
-  list: [],
+  totalConfirmed: 0,
+  items: [],
   selected: null,
 };
 

@@ -2,7 +2,6 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import LoadingBar from 'react-redux-loading-bar';
 import Home from './components/home/Home';
 import Details from './components/details/Details';
-import './App.css';
 
 const routes = [
   {

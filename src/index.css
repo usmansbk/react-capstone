@@ -1,4 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+@font-face {
+  font-family: GillSans;
+  src: url(./assets/GillSans.otf);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: GillSansBold;
+  src: url(./assets/GillSansBold.otf);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: GillSansMedium;
+  src: url(./assets/GillSansMedium.otf);
+  font-weight: bolder;
+}
+
 * {
   margin: 0;
   padding: 0;
+  font-family: 'Lato', sans-serif;
+  color: white;
+}
+
+body {
+  background-color: #eb4c89;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }

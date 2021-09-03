@@ -1,0 +1,61 @@
+.Home-header {
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.Home-header-title {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.Home-banner {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.Home-title {
+  font-family: GillSansBold, sans-serif;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.Home-subtitle {
+  font-family: GillSans, sans-serif;
+}
+
+.Home-stats {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.Home-stats-title {
+  font-size: 16px;
+  padding: 4px 8px;
+}
+
+.Home-grid {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-auto-columns: 1fr;
+  list-style-type: none;
+}
+
+.Home-grid-item:nth-child(4n+2),
+.Home-grid-item:nth-child(4n+3) {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
+.Home-item-content {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: right;
+  height: 100px;
+}
