@@ -20,6 +20,10 @@
 .Details-item {
   padding: 24px 8px;
   cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
 }
 
 .Details-item:nth-child(odd) {
@@ -29,4 +33,10 @@
 .Details-item-title {
   font-family: GillSansMedium, sans-serif;
   font-size: 20px;
+}
+
+.Details-item-right {
+  display: flex;
+  gap: 20px;
+  min-width: fit-content;
 }

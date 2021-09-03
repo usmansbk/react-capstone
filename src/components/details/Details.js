@@ -46,9 +46,17 @@ const Details = () => {
       <section className="Home-stats">
         <h5 className="App-section-title">CITY/TOWN BREAKDOWN - 2021</h5>
         <ul>
-          {list.map(([name]) => (
+          {list.map(([name, { confirmed }]) => (
             <li key={name} className="Details-item">
               <h6 className="Details-item-title">{name}</h6>
+              <div className="Details-item-right">
+                <p className="App-subtitle">
+                  {formatNumber(confirmed)}
+                  {' '}
+                  cases
+                </p>
+                <Icon name="arrow_circle_right" />
+              </div>
             </li>
           ))}
         </ul>
