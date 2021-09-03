@@ -1,0 +1,12 @@
+.Details-banner {
+  padding: 40px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.Details-banner-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

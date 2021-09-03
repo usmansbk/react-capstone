@@ -11,11 +11,6 @@
   justify-content: center;
 }
 
-.Home-map {
-  width: 100%;
-  filter: brightness(40%) opacity(0.5);
-}
-
 .Home-stats {
   background-color: rgba(0, 0, 0, 0.1);
 }

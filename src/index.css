@@ -72,3 +72,8 @@ a {
   font-size: 14px;
   padding: 4px 8px;
 }
+
+.App-map {
+  width: 100%;
+  filter: brightness(40%) opacity(0.5);
+}

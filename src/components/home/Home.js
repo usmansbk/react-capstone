@@ -63,7 +63,7 @@ const Home = () => {
       </header>
       <div className="Home-banner">
         <div className="Home-banner-left">
-          <img src={map} alt="" className="Home-map" />
+          <img src={map} alt="" className="App-map" />
         </div>
         <div className="Home-banner-right">
           <h1 className="App-title">{continent}</h1>
