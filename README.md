@@ -4,7 +4,7 @@
 
 > Covid-19 Tracker
 
-![screenshot](./app_screenshot.jpeg)
+![screenshot](./app_screenshot.png)
 
 This application displays Covid-19 information from different data sources.
 
