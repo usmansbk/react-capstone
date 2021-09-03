@@ -57,3 +57,13 @@ a {
   flex-grow: 1;
   text-align: center;
 }
+
+.App-title {
+  font-family: GillSansBold, sans-serif;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.App-subtitle {
+  font-family: GillSans, sans-serif;
+}

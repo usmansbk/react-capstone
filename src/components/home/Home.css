@@ -16,16 +16,6 @@
   filter: brightness(40%) opacity(0.5);
 }
 
-.Home-title {
-  font-family: GillSansBold, sans-serif;
-  font-size: 18px;
-  text-transform: uppercase;
-}
-
-.Home-subtitle {
-  font-family: GillSans, sans-serif;
-}
-
 .Home-stats {
   background-color: rgba(0, 0, 0, 0.1);
 }

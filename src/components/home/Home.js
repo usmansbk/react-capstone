@@ -19,8 +19,8 @@ const Item = ({ confirmed, name }) => (
       <img src={virus} alt="" className="Home-item-image" />
     </div>
     <div className="Home-item-bottom">
-      <h4 className="Home-title">{name}</h4>
-      <p className="Home-subtitle">{format(confirmed)}</p>
+      <h4 className="App-title">{name}</h4>
+      <p className="App-subtitle">{format(confirmed)}</p>
     </div>
   </div>
 );
@@ -66,8 +66,8 @@ const Home = () => {
           <img src={map} alt="" className="Home-map" />
         </div>
         <div className="Home-banner-right">
-          <h1 className="Home-title">{continent}</h1>
-          <p className="Home-subtitle">{`${format(totalConfirmed)} cases`}</p>
+          <h1 className="App-title">{continent}</h1>
+          <p className="App-subtitle">{`${format(totalConfirmed)} cases`}</p>
         </div>
       </div>
       <section className="Home-stats">
