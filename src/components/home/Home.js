@@ -13,7 +13,7 @@ const format = (n) => n.toLocaleString('en-US');
 const Item = ({ confirmed, name }) => (
   <div className="Home-item-content">
     <div className="Home-item-icon">
-      <Icon name="arrow_right" />
+      <Icon name="arrow_circle_right" />
     </div>
     <div className="Home-item-top">
       <img src={virus} alt="" className="Home-item-image" />

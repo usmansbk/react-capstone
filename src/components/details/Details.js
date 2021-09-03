@@ -2,6 +2,8 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useParams } from 'react-router-dom';
 import { fetchCountry } from '../../redux/countries/countries';
+import Icon from '../Icon';
+import './Details.css';
 
 const Details = () => {
   const { name } = useParams();
@@ -23,7 +25,11 @@ const Details = () => {
 
   return (
     <div>
-      <Link to="/">Go Back</Link>
+      <header>
+        <Link to="/">
+          <Icon name="arrow_back_ios" />
+        </Link>
+      </header>
       <h1>{All.country}</h1>
       <h1>{All.confirmed}</h1>
     </div>
