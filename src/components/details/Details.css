@@ -1,12 +1,13 @@
 .Details-banner {
   padding: 40px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
   gap: 30px;
+  text-align: end;
 }
 
 .Details-banner-right {
   display: flex;
+  width: 100%;
   flex-direction: column;
   justify-content: center;
 }
