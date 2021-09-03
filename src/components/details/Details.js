@@ -21,7 +21,7 @@ const Details = () => {
   }, []);
 
   if (loading || !country) {
-    return <h1>Loading...</h1>;
+    return null;
   }
 
   const { All } = country;
@@ -43,7 +43,9 @@ const Details = () => {
           <p className="App-subtitle">{`${format(All.confirmed)} cases`}</p>
         </div>
       </div>
-
+      <section className="Home-stats">
+        <h5 className="App-section-title">CITY/TOWN BREAKDOWN - 2021</h5>
+      </section>
     </section>
   );
 };
