@@ -18,7 +18,7 @@ const routes = [
 
 const App = () => (
   <Router>
-    <LoadingBar />
+    <LoadingBar className="App-loading-bar" />
     <Switch>
       {routes.map(({ path, component }) => (
         <Route key={path} exact path={path} component={component} />
