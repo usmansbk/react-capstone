@@ -16,7 +16,7 @@ export const getCountries = async () => Promise.resolve({
 export const getCountry = async () => Promise.resolve({
   All: {
     confirmed: 3,
-    country: 'Testing3',
+    country: 'All',
   },
   Testing3: {
     confirmed: 4,

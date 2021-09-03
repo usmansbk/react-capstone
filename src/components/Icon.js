@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-const Icon = ({ name }) => <span className="material-icons">{name}</span>;
+const Icon = ({ name }) => <span className="material-icons-outlined">{name}</span>;
 
 export default Icon;
 

@@ -4,23 +4,22 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { fetchCountries } from '../../redux/countries/countries';
 import Icon from '../Icon';
+import formatNumber from '../../utils/formatNumber';
 import './Home.css';
 import virus from '../../assets/virus.svg';
 import map from '../../assets/europe.png';
 
-const format = (n) => n.toLocaleString('en-US');
-
 const Item = ({ confirmed, name }) => (
   <div className="Home-item-content">
     <div className="Home-item-icon">
-      <Icon name="arrow_right" />
+      <Icon name="arrow_circle_right" />
     </div>
     <div className="Home-item-top">
       <img src={virus} alt="" className="Home-item-image" />
     </div>
     <div className="Home-item-bottom">
-      <h4 className="Home-title">{name}</h4>
-      <p className="Home-subtitle">{format(confirmed)}</p>
+      <h4 className="App-title">{name}</h4>
+      <p className="App-subtitle">{formatNumber(confirmed)}</p>
     </div>
   </div>
 );
@@ -53,25 +52,31 @@ const Home = () => {
   }, []);
 
   if (loading) {
-    return <h1>Loading...</h1>;
+    return null;
   }
 
   return (
     <section>
-      <header className="Home-header">
-        <h5 className="Home-header-title">cases</h5>
+      <header className="App-header">
+        <Icon name="arrow_back_ios" />
+        <h4>2021</h4>
+        <h5 className="App-header-title">confirmed cases</h5>
+        <Icon name="mic" />
+        <div className="pl-5">
+          <Icon name="settings" />
+        </div>
       </header>
       <div className="Home-banner">
         <div className="Home-banner-left">
-          <img src={map} alt="" className="Home-map" />
+          <img src={map} alt="" className="App-map" />
         </div>
         <div className="Home-banner-right">
-          <h1 className="Home-title">{continent}</h1>
-          <p className="Home-subtitle">{`${format(totalConfirmed)} cases`}</p>
+          <h1 className="App-title">{continent}</h1>
+          <p className="App-subtitle">{`${formatNumber(totalConfirmed)} cases`}</p>
         </div>
       </div>
       <section className="Home-stats">
-        <h5 className="Home-stats-title">STATS BY COUNTRY</h5>
+        <h5 className="App-section-title">STATS BY COUNTRY</h5>
         <Grid items={items} />
       </section>
     </section>
