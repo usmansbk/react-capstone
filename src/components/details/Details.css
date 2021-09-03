@@ -38,5 +38,4 @@
 .Details-item-right {
   display: flex;
   gap: 20px;
-  min-width: fit-content;
 }
