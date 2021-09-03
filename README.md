@@ -14,7 +14,7 @@ This application displays Covid-19 information from different data sources.
 
 ## Live Demo
 
-[Live Demo Link](https://usmansbk.github.io/repo_name)
+[Live Demo Link](https://zealous-shockley-872469.netlify.app)
 
 ## Getting Started
 
