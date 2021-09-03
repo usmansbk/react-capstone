@@ -58,8 +58,8 @@ const Home = () => {
 
   return (
     <section>
-      <header className="Home-header">
-        <h5 className="Home-header-title">confirmed cases</h5>
+      <header className="App-header">
+        <h5 className="App-header-title">confirmed cases</h5>
       </header>
       <div className="Home-banner">
         <div className="Home-banner-left">

@@ -39,3 +39,21 @@ a {
   position: absolute;
   height: 3px;
 }
+
+.App-header {
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 0 4px;
+}
+
+.App-header-title {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 20px;
+  flex-grow: 1;
+  text-align: center;
+}

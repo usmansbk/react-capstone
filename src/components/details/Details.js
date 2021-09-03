@@ -25,10 +25,11 @@ const Details = () => {
 
   return (
     <div>
-      <header>
+      <header className="App-header">
         <Link to="/">
           <Icon name="arrow_back_ios" />
         </Link>
+        <h5 className="App-header-title">town/city views</h5>
       </header>
       <h1>{All.country}</h1>
       <h1>{All.confirmed}</h1>
