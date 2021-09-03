@@ -20,11 +20,6 @@
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-.Home-stats-title {
-  font-size: 14px;
-  padding: 4px 8px;
-}
-
 .Home-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

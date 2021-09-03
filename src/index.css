@@ -67,3 +67,8 @@ a {
 .App-subtitle {
   font-family: GillSans, sans-serif;
 }
+
+.App-section-title {
+  font-size: 14px;
+  padding: 4px 8px;
+}
