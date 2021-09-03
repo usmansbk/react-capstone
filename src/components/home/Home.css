@@ -15,9 +15,19 @@
 
 .Home-banner {
   padding: 40px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.Home-banner-right {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  justify-content: center;
+}
+
+.Home-map {
+  width: 100%;
 }
 
 .Home-title {
@@ -52,6 +62,7 @@
 }
 
 .Home-item-content {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -60,7 +71,7 @@
 }
 
 .Home-item-top {
-  padding: 16px;
+  padding: 8px 16px;
   display: flex;
 }
 
